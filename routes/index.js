@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var clusterName = 'Unknown Cluster'
 var imageTag    = 'Undefined'
+var prefix      = 'Undefined'
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,8 +12,11 @@ router.get('/', function(req, res, next) {
   if (process.env.IMAGE_TAG) {
     imageTag = process.env.IMAGE_TAG;
   }
+  if (process.env.PREFIX) {
+    prefix = process.env.PREFIX;
+  }
 
-  res.render('index', { title: 'Red Hat Tech Exchange', clusterName, imageTag });
+  res.render('index', { title: 'Red Hat Tech Exchange', clusterName, imageTag, prefix });
 });
 
 /* Return Cluster Name. */
