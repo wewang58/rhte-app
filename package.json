@@ -12,7 +12,8 @@
   },
   "keywords": [
     "rthe",
-    "nodejs"
+    "nodejs",
+    "example"
   ],
   "author": "Wolfgang Kulhanek",
   "license": "Apache-2.0",
